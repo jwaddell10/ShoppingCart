@@ -1,7 +1,9 @@
 function Cart() {
-    <div>
-        <h3>test content cart</h3>
-    </div>
+    return (
+        <>
+            <h3>this is cart test content</h3>
+        </>
+    )
 }
 
 export default Cart;

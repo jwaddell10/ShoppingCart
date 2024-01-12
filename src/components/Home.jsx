@@ -16,7 +16,7 @@ function NavBar() {
     return (
         <div className="navbar">
             <h5>Website Name</h5>
-            <Link to="home">Home</Link>
+            <Link to="/">Home</Link>
             <Link to="shopping">Shopping</Link>
             <Link to="cart">Cart</Link>
         </div>
@@ -26,7 +26,7 @@ function NavBar() {
 function Body() {
     return (
         <>
-        <h1>body content here</h1>
+            <h1>body content here</h1>
         </>
     )
 }

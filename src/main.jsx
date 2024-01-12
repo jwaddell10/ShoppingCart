@@ -11,19 +11,15 @@ const router = createBrowserRouter([
     path: "/",
     element: <HomePage />
   },
-  // {
-  //   path: "home",
-  //   element: <HomePage />
-  // },
   {
     path: "shopping",
     element: <Shopping />,
     //maybe have children here? like for filters to more specific sets of items
   },
-  // {
-  //   path: "cart",
-  //   element: <Cart />
-  // },
+  {
+    path: "cart",
+    element: <Cart />
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
