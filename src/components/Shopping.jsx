@@ -1,14 +1,12 @@
 import useTitle from "./FetchAPI.jsx";
 
 const Shopping = () => {
-  const { items, error, loading } = useTitle();
-  if (error) return <p>A network error was encountered</p>;
-  if (loading) return <p>Loading...</p>;
-
+    const { items, error, loading } = useTitle();
+    console.log(items, 'this is items')
+    
   return (
     <>
       <h1>Items</h1>
-      
     </>
   );
 };

@@ -28,9 +28,9 @@ const useTitle = () => {
     };
     getData();
   }, []);
-  items.forEach((item) => {
-    console.log(item, 'this is item')
-  })
+//   items.forEach((item) => {
+//     console.log(item, 'this is item')
+//   })
   return { items, error, loading };
 };
 
