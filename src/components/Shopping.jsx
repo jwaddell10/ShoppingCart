@@ -2,7 +2,9 @@ import useTitle from "./FetchAPI.jsx";
 
 const Shopping = () => {
     const { items, error, loading } = useTitle();
-    console.log(items, 'this is items')
+    items.map((item) => {
+        console.log(item, 'this is item')
+    })
     
   return (
     <>

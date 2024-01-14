@@ -16,8 +16,8 @@ const useTitle = () => {
             `This is an HTTP error: The status is ${response.status}`
           );
         }
-        let items = await response.json();
-        setItems(items);
+        let data = await response.json();
+        setItems(data);
         setError(null);
       } catch (err) {
         setError(err.message);
