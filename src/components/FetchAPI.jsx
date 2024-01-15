@@ -9,15 +9,15 @@ const useTitle = () => {
     const getData = async () => {
       try {
         const response = await fetch(
-          "https://api.escuelajs.co/api/v1/products/?categoryId=2"
+          "https://fakestoreapi.com/products/category/electronics"
         );
         if (!response.ok) {
           throw new Error(
             `This is an HTTP error: The status is ${response.status}`
           );
         }
-        let items = await response.json();
-        setItems(items);
+        let data = await response.json();
+        setItems(data);
         setError(null);
       } catch (err) {
         setError(err.message);
@@ -28,9 +28,7 @@ const useTitle = () => {
     };
     getData();
   }, []);
-  items.forEach((item) => {
-    console.log(item, 'this is item')
-  })
+
   return { items, error, loading };
 };
 
