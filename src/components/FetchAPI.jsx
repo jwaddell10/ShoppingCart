@@ -9,7 +9,7 @@ const useTitle = () => {
     const getData = async () => {
       try {
         const response = await fetch(
-          "https://api.escuelajs.co/api/v1/products/?categoryId=2"
+          "https://fakestoreapi.com/products/category/electronics"
         );
         if (!response.ok) {
           throw new Error(
