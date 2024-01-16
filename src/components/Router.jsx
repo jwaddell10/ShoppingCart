@@ -14,9 +14,9 @@ const Router = () => {
       element: <Shopping />,
     },
     {
-        path: "/cart",
-        element: <Cart />,
-      },
+      path: "/cart",
+      element: <Cart />,
+    },
   ]);
 
   return <RouterProvider router={router} />;
