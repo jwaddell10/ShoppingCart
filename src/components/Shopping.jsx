@@ -2,9 +2,9 @@ import useTitle from "./FetchAPI.jsx";
 import PropTypes from "prop-types";
 import NavBar from "./NavBar.jsx";
 
-function DisplayItemInfo({ name, image, price }) {
+function DisplayItemInfo({ name, image, price, id }) {
   return (
-    <li className="item">
+    <li className="item" key={id}>
       <h3>{name}</h3>
       <img 
         src={image}
@@ -17,12 +17,13 @@ function DisplayItemInfo({ name, image, price }) {
   );
 }
 
-function ManageCart({ name }) {
+function ManageCart({ name, item }) {
   function addToCart() {
     //need to add item to cart
     //add items properties
     //just add name of item to cart
     console.log(name, 'etarget')
+    console.log(item, 'this is item')
   }
   return (
     <>
@@ -36,7 +37,6 @@ const Shopping = () => {
   const listItems =
     items &&
     items.map((item, index) => {
-      console.log(item, "this is item");
       return {
         item,
         index,
@@ -51,32 +51,40 @@ const Shopping = () => {
     <>
       <NavBar />
       <h1>Items</h1>
-      <ul>
-        {listItems &&
-          listItems.map((item, index) => (
-            <>
+        <ul>
+      {listItems &&
+        listItems.map((item, index) => {
+          // Log the id of each item
+          console.log(`Logging id for item ${index + 1}:`, item.id);
+
+          return (
+            <div key={item.id}>
               <DisplayItemInfo
                 key={index}
                 name={item.name}
+                id={item.id}
                 image={item.image}
                 price={item.price}
               />
               <ManageCart name={item.name}/>
-            </>
-          ))}
-      </ul>
+            </div>
+          );
+        })}
+    </ul>
     </>
   );
 };
 
 DisplayItemInfo.propTypes = {
   name: PropTypes.string,
-  image: PropTypes.array,
+  image: PropTypes.string,
   price: PropTypes.number,
+  id: PropTypes.number,
 };
 
 ManageCart.propTypes = {
     name: PropTypes.string,
+    item: PropTypes.object,
 }
 
 export default Shopping;
