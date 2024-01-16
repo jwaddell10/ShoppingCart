@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import NavBar from "./NavBar";
 
 function HomePage() {
   //needs three icons, image assets?
@@ -9,17 +10,6 @@ function HomePage() {
       <NavBar />
       <Body />
     </>
-  );
-}
-
-function NavBar() {
-  return (
-    <div className="navbar">
-      <h5>Website Name</h5>
-      <Link to="/">Home</Link>
-      <Link to="shopping">Shopping</Link>
-      <Link to="cart">Cart</Link>
-    </div>
   );
 }
 

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <nav>
+      <h3>Website Name</h3>
       <ul>
         <li>
           <Link to="/">Home</Link>
