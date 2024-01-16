@@ -10,11 +10,11 @@ const Router = () => {
       element: <HomePage />,
     },
     {
-      path: "shopping",
+      path: "/shopping",
       element: <Shopping />,
     },
     {
-        path: "cart",
+        path: "/cart",
         element: <Cart />,
       },
   ]);

@@ -1,8 +1,6 @@
 //import {Shopping, ManageCart} from './Shopping'
 import NavBar from "./NavBar.jsx";
 
-
-
 function Cart() {
   return (
     <>
