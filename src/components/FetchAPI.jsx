@@ -9,8 +9,9 @@ const useTitle = () => {
     const getData = async () => {
       try {
         const response = await fetch(
-          "https://fakestoreapi.com/products/category/electronics"
-        );
+          "https://fakestoreapi.com/products/category/electronics", {
+            mode: "cors",
+          })
         if (!response.ok) {
           throw new Error(
             `This is an HTTP error: The status is ${response.status}`
