@@ -1,7 +1,7 @@
 import useTitle from "./FetchAPI.jsx";
 import PropTypes from "prop-types";
 
-const Shopping = () => {
+const Shopping = ({ addToCart }) => {
   const { items } = useTitle();
   const listItems =
     items &&
@@ -24,13 +24,13 @@ const Shopping = () => {
     );
   }
 
-  function addToCart(name) {
-    //need to add item to cart
-    //add items properties
-    //just add name of item to cart
-    //how to trigger function in another module?
-    console.log(name, "etarget");
-  }
+  // function addToCart(name) {
+  //   //need to add item to cart
+  //   //add items properties
+  //   //just add name of item to cart
+  //   //how to trigger function in another module?
+  //   console.log(name, "etarget");
+  // }
 
   return (
     <>
@@ -45,7 +45,7 @@ const Shopping = () => {
                 image={item.image}
                 price={item.price}
               />
-              <button onClick={() => addToCart(item.name)}>Add To Cart</button>
+              <button onClick={() => addToCart(item)}>Add To Cart</button>
             </div>
           ))}
       </ul>
@@ -58,6 +58,7 @@ Shopping.propTypes = {
   image: PropTypes.string,
   price: PropTypes.number,
   id: PropTypes.number,
+  addToCart: PropTypes.func,
 };
 
 export default Shopping;
