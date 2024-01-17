@@ -16,12 +16,12 @@ function App() {
   };
   const removeFromCart = (itemToRemove) => {
     const currentItem = itemToRemove.id;
-    console.log(currentItem, 'this is currentitem')
+    console.log(currentItem, "this is currentitem");
 
-    const newItems = cart.filter((cartItem) => cartItem.id !== currentItem)
+    const newItems = cart.filter((cartItem) => cartItem.id !== currentItem);
     setCart(newItems);
-    console.log(newItems, 'these are new items')
-  }
+    console.log(newItems, "these are new items");
+  };
 
   return (
     <Router>
@@ -34,7 +34,16 @@ function App() {
             <Shopping addToCart={addToCart} removeFromCart={removeFromCart} />
           }
         />
-        <Route path="/cart" element={<Cart cart={cart} addToCart={addToCart} removeFromCart={removeFromCart}/>} />
+        <Route
+          path="/cart"
+          element={
+            <Cart
+              cart={cart}
+              addToCart={addToCart}
+              removeFromCart={removeFromCart}
+            />
+          }
+        />
       </Routes>
     </Router>
   );

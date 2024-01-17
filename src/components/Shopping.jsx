@@ -2,7 +2,7 @@ import useTitle from "./FetchAPI.jsx";
 import PropTypes from "prop-types";
 
 const Shopping = ({ addToCart, removeFromCart }) => {
-  console.log(addToCart, 'this is addtocartshopp')
+  console.log(addToCart, "this is addtocartshopp");
   const { items } = useTitle();
   const listItems =
     items &&
