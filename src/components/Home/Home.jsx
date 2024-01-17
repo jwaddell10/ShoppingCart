@@ -14,7 +14,7 @@ function HomePage() {
 function Body() {
   return (
     <>
-      <img src="src/assets/HomePageBackground.png" alt="laptopcomputerondesk"/>
+      <img src="src/assets/HomePageBackground.png" alt="laptopcomputerondesk" style={imageStyle}/>
     </>
   );
 }
@@ -25,12 +25,11 @@ const StyledH1 = styled.h1`
   display: flex;
 `;
 
-const StyledBody = {
-  height: '100vh', // Note: Specify units for height
-  margin: 0,
-  backgroundImage: 'url("src/assets/HomePageBackground.png")', // Note: Use camelCase for backgroundImage
-  backgroundSize: 'cover', // Note: Use camelCase for backgroundSize
-  backgroundPosition: 'center', // Note: Use camelCase for backgroundPosition
+const imageStyle = { 
+  margin: "0",
+  width: "100%", // Make the image responsive by setting width to 100%
+  height: "auto", // Maintain the aspect ratio
+  objectFit: "cover", // You may want to use "cover" or "contain" based on your design
 };
 
 export default HomePage;
