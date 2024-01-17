@@ -14,19 +14,11 @@ const Shopping = ({ addToCart }) => {
       };
     });
 
-  // function addToCart(name) {
-  //   //need to add item to cart
-  //   //add items properties
-  //   //just add name of item to cart
-  //   //how to trigger function in another module?
-  //   console.log(name, "etarget");
-  // }
-
   return (
     <>
       <h1>Items</h1>
-      <ul>
-        {listItems &&
+      <div>
+      {listItems &&
           listItems.map((item) => (
             <div key={item.id}>
               <DisplayItemInfo
@@ -38,7 +30,7 @@ const Shopping = ({ addToCart }) => {
               <button onClick={() => addToCart(item)}>Add To Cart</button>
             </div>
           ))}
-      </ul>
+      </div>
     </>
   );
 };

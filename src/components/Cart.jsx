@@ -7,14 +7,15 @@ function Cart({ cart }) {
     <>
       {cart && cart.length > 0 ? (
         cart.map((item) => (
-          <li key={item.id}>
+          <div key={item.id}>
             <DisplayItemInfo 
               name={item.name}
               id={item.id}
               image={item.image}
               price={item.price}
             />
-          </li>
+          </div>
+          
         ))
       ) : (
         <h3>this cart is empty</h3>
