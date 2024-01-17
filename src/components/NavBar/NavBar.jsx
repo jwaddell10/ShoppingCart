@@ -26,11 +26,10 @@ function NavBar() {
 
 const StyledNavBar = styled.section`
   display: flex;
-  padding: 0 20px;
+  padding: 0 1vw;
   justify-content: space-between;
   position: sticky;
   top: 0;
-  width: 100vw;
 `;
 
 const StyledList = styled.section`
