@@ -26,6 +26,7 @@ function NavBar() {
 
 const StyledNavBar = styled.section`
   display: flex;
+  padding: 0 20px;
   justify-content: space-between;
   position: sticky;
   top: 0;

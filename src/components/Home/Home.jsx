@@ -19,12 +19,6 @@ function Body() {
   );
 }
 
-const StyledH1 = styled.h1`
-  color: #333;
-  font-size: 2em;
-  display: flex;
-`;
-
 const imageStyle = { 
   margin: "0",
   width: "100%", // Make the image responsive by setting width to 100%
