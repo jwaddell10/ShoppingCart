@@ -1,7 +1,8 @@
 import useTitle from "./FetchAPI.jsx";
 import PropTypes from "prop-types";
 
-const Shopping = ({ addToCart }) => {
+const Shopping = ({ addToCart, removeFromCart }) => {
+  console.log(addToCart, 'this is addtocartshopp')
   const { items } = useTitle();
   const listItems =
     items &&
@@ -18,7 +19,7 @@ const Shopping = ({ addToCart }) => {
     <>
       <h1>Items</h1>
       <div>
-      {listItems &&
+        {listItems &&
           listItems.map((item) => (
             <div key={item.id}>
               <DisplayItemInfo
@@ -28,6 +29,9 @@ const Shopping = ({ addToCart }) => {
                 price={item.price}
               />
               <button onClick={() => addToCart(item)}>Add To Cart</button>
+              <button onClick={() => removeFromCart(item)}>
+                Remove From Cart
+              </button>
             </div>
           ))}
       </div>
@@ -56,6 +60,7 @@ Shopping.propTypes = {
   price: PropTypes.number,
   id: PropTypes.number,
   addToCart: PropTypes.func,
+  removeFromCart: PropTypes.func,
 };
 
-export { Shopping, DisplayItemInfo }
+export { Shopping, DisplayItemInfo };

@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import { DisplayItemInfo } from "./Shopping.jsx";
 
-function Cart({ cart }) {
-  console.log(cart, 'this is cart')
+function Cart({ cart, addToCart, removeFromCart }) {
+  console.log(addToCart, 'thisi s cart')
   return (
     <>
       {cart && cart.length > 0 ? (
@@ -14,6 +14,10 @@ function Cart({ cart }) {
               image={item.image}
               price={item.price}
             />
+            <button onClick={() => addToCart(item)}>Add To Cart</button>
+              <button onClick={() => removeFromCart(item)}>
+                Remove From Cart
+              </button>
           </div>
           
         ))
@@ -26,6 +30,8 @@ function Cart({ cart }) {
 
 Cart.propTypes = {
   cart: PropTypes.array,
+  addToCart: PropTypes.func,
+  removeFromCart: PropTypes.func,
 }
 
 export default Cart;
