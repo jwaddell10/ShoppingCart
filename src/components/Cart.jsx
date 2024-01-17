@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { DisplayItemInfo } from "./Shopping.jsx";
 
 function Cart({ cart }) {
   console.log(cart, 'this is cart')
@@ -7,7 +8,12 @@ function Cart({ cart }) {
       {cart && cart.length > 0 ? (
         cart.map((item) => (
           <li key={item.id}>
-            {item.name}
+            <DisplayItemInfo 
+              name={item.name}
+              id={item.id}
+              image={item.image}
+              price={item.price}
+            />
           </li>
         ))
       ) : (

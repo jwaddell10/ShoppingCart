@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./Home.jsx";
-import Shopping from "./Shopping.jsx";
+import { Shopping } from "./Shopping.jsx";
 import Cart from "./Cart.jsx";
 
 const Router = () => {

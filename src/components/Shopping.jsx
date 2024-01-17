@@ -14,16 +14,6 @@ const Shopping = ({ addToCart }) => {
       };
     });
 
-  function DisplayItemInfo({ name, image, price, id }) {
-    return (
-      <li className="item" key={id}>
-        <h3>{name}</h3>
-        <img src={image} alt={name} height={100} width={100} />
-        <h3>${price}</h3>
-      </li>
-    );
-  }
-
   // function addToCart(name) {
   //   //need to add item to cart
   //   //add items properties
@@ -53,6 +43,21 @@ const Shopping = ({ addToCart }) => {
   );
 };
 
+const DisplayItemInfo = ({ name, image, price, id }) => (
+  <li className="item" key={id}>
+    <h3>{name}</h3>
+    <img src={image} alt={name} height={100} width={100} />
+    <h3>${price}</h3>
+  </li>
+);
+
+DisplayItemInfo.propTypes = {
+  name: PropTypes.string,
+  image: PropTypes.string,
+  price: PropTypes.number,
+  id: PropTypes.number,
+};
+
 Shopping.propTypes = {
   name: PropTypes.string,
   image: PropTypes.string,
@@ -61,4 +66,4 @@ Shopping.propTypes = {
   addToCart: PropTypes.func,
 };
 
-export default Shopping;
+export { Shopping, DisplayItemInfo }
