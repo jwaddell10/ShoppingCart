@@ -1,10 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import NavBar from "./components/NavBar.jsx";
+import NavBar from "./components/NavBar/NavBar.jsx";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from "./components/Home.jsx";
-import { Shopping } from "./components/Shopping.jsx";
-import Cart from "./components/Cart.jsx";
+import HomePage from "./components/Home/Home.jsx";
+import { Shopping } from "./components/Shopping/Shopping.jsx";
+import Cart from "./components/Cart/Cart.jsx";
 import useTitle from "./components/FetchAPI.jsx";
 import PropTypes from "prop-types";
 
@@ -16,11 +16,8 @@ function App() {
   };
   const removeFromCart = (itemToRemove) => {
     const currentItem = itemToRemove.id;
-    console.log(currentItem, "this is currentitem");
-
     const newItems = cart.filter((cartItem) => cartItem.id !== currentItem);
     setCart(newItems);
-    console.log(newItems, "these are new items");
   };
 
   return (

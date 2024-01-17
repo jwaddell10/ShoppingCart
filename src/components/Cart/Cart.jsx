@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
-import { DisplayItemInfo } from "./Shopping.jsx";
+import { DisplayItemInfo } from "../Shopping/Shopping.jsx";
 
 function Cart({ cart, addToCart, removeFromCart }) {
-  console.log(addToCart, "thisi s cart");
   return (
     <>
       {cart && cart.length > 0 ? (
