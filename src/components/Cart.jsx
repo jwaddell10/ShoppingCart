@@ -1,10 +1,18 @@
 import PropTypes from "prop-types";
 
 function Cart({ cart }) {
- const newCart = cart.find((item) => console.log(item, 'this is item'))
+  console.log(cart, 'this is cart')
   return (
     <>
-      <h3>this cart is empty</h3>
+      {cart && cart.length > 0 ? (
+        cart.map((item) => (
+          <li key={item.id}>
+            {item.name}
+          </li>
+        ))
+      ) : (
+        <h3>this cart is empty</h3>
+      )}
     </>
   );
 }
