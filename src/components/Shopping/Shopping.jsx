@@ -1,6 +1,7 @@
 import useTitle from "../FetchAPI.jsx";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import InputField from "./InputField.jsx";
 
 const Shopping = ({ addToCart, removeFromCart }) => {
   const { items } = useTitle();
@@ -30,6 +31,7 @@ const Shopping = ({ addToCart, removeFromCart }) => {
                     image={item.image}
                     price={item.price}
                   />
+                  <InputField />
                   <button onClick={() => addToCart(item)}>Add To Cart</button>
                   <button onClick={() => removeFromCart(item)}>
                     Remove From Cart

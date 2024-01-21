@@ -2,6 +2,12 @@ import PropTypes from "prop-types";
 import { DisplayItemInfo } from "../Shopping/Shopping.jsx";
 
 function Cart({ cart, addToCart, removeFromCart }) {
+  const totalPrice = cart.reduce((acc, item) => {
+    console.log(acc,'this is acc')
+    console.log(item.price);
+    return acc + item.price
+  }, 0)
+  console.log(totalPrice, 'this isprice')
   return (
     <>
       {cart && cart.length > 0 ? (
