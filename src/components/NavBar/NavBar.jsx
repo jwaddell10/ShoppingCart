@@ -13,7 +13,7 @@ function NavBar() {
   return (
     <nav className="navbar">
       <StyledNavBar>
-        <h3 style={headingStyle}>Website Name:</h3>
+        <h3 style={headingStyle}>Electronics Store</h3>
         <ul>
           <StyledList>
             <li>

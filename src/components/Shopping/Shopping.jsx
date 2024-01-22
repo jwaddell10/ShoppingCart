@@ -69,6 +69,8 @@ const StyledCard = styled.section`
   border: 1px solid black;
   flex-direction: row;
   flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
 `;
 
 DisplayItemInfo.propTypes = {

@@ -1,13 +1,10 @@
 import PropTypes from "prop-types";
 import { DisplayItemInfo } from "../Shopping/Shopping.jsx";
 
-function Cart({ cart, addToCart, removeFromCart }) {
+function Cart({ cart, removeFromCart }) {
   const totalPrice = cart.reduce((acc, item) => {
-    console.log(acc,'this is acc')
-    console.log(item.price);
-    return acc + item.price
-  }, 0)
-  console.log(totalPrice, 'this isprice')
+    return acc + item.price;
+  }, 0);
   return (
     <>
       {cart && cart.length > 0 ? (
@@ -19,7 +16,6 @@ function Cart({ cart, addToCart, removeFromCart }) {
               image={item.image}
               price={item.price}
             />
-            <button onClick={() => addToCart(item)}>Add To Cart</button>
             <button onClick={() => removeFromCart(item)}>
               Remove From Cart
             </button>
@@ -28,6 +24,7 @@ function Cart({ cart, addToCart, removeFromCart }) {
       ) : (
         <h3>this cart is empty</h3>
       )}
+      <div>Total: ${totalPrice}</div>
     </>
   );
 }
