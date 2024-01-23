@@ -22,7 +22,7 @@ function Cart({ cart, removeFromCart }) {
           </div>
         ))
       ) : (
-        <h3>this cart is empty</h3>
+        <h3>Oh no! Your cart is empty</h3>
       )}
       <div>Total: ${totalPrice}</div>
     </>

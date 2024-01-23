@@ -1,0 +1,20 @@
+.pagediv {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.h1 {
+  text-align: center;
+}
+
+.h3 {
+  display: flex;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+}
