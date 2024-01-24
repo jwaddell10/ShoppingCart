@@ -5,7 +5,7 @@ import styles from "./Shopping.module.css";
 
 import InputField from "./InputField.jsx";
 
-const Shopping = ({ addToCart, removeFromCart }) => {
+const Shopping = ({ addToCart }) => {
   const { items } = useTitle();
   const listItems =
     items &&
@@ -38,9 +38,6 @@ const Shopping = ({ addToCart, removeFromCart }) => {
                     <StyledButton>
                       <button onClick={() => addToCart(item)}>
                         Add To Cart
-                      </button>
-                      <button onClick={() => removeFromCart(item)}>
-                        Remove From Cart
                       </button>
                     </StyledButton>
                   </StyledCard>

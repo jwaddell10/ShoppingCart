@@ -27,7 +27,7 @@ function App() {
         <Route
           path="/shopping"
           element={
-            <Shopping addToCart={addToCart} removeFromCart={removeFromCart} />
+            <Shopping addToCart={addToCart} />
           }
         />
         <Route
@@ -35,7 +35,6 @@ function App() {
           element={
             <Cart
               cart={cart}
-              addToCart={addToCart}
               removeFromCart={removeFromCart}
             />
           }
