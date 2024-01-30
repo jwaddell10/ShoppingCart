@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 import { DisplayItemInfo } from "../Shopping/Shopping.jsx";
+import styles from "./Cart.module.css";
+
 import styled from "styled-components";
 
 function Cart({ cart, removeFromCart }) {
@@ -8,6 +10,7 @@ function Cart({ cart, removeFromCart }) {
   }, 0);
   return (
     <>
+      <h1 className={styles.h1}>Cart</h1>
       <StyledList>
         {" "}
         {cart && cart.length > 0 ? (
