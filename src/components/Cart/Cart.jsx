@@ -32,11 +32,16 @@ function Cart({ cart, removeFromCart }) {
             </div>
           ))
         ) : (
-          <h3>Oh no! Your cart is empty</h3>
+          <StyledText>
+            {" "}
+            <h3>Oh no! Your cart is empty</h3>
+          </StyledText>
         )}
       </StyledList>
-      <StyledText>      <div>Total: ${totalPrice}</div>
-</StyledText>
+      <StyledText>
+        {" "}
+        <div>Total: ${totalPrice}</div>
+      </StyledText>
     </>
   );
 }
@@ -53,6 +58,7 @@ const StyledList = styled.section`
 
 const StyledCard = styled.section`
   display: flex;
+  border: 1px solid black;
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -71,8 +77,13 @@ const StyledButton = styled.section`
 `;
 
 const StyledText = styled.section`
-  font-size: 1.25rem;
-`
+font-size: 1.25rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: span 2; 
+`;
 
 Cart.propTypes = {
   cart: PropTypes.array,
