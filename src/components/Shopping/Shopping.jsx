@@ -21,7 +21,6 @@ const Shopping = ({ addToCart }) => {
   return (
     <>
       <StyledDiv>
-        
         <div className={styles.pagediv}>
           <h1 className={styles.h1}>Products</h1>
           <StyledList>
@@ -60,7 +59,6 @@ const DisplayItemInfo = ({ name, image, price, id }) => {
           alt={name}
           style={{ width: "50%", height: "auto" }}
         />
-      
       </StyledImage>
       <h3 className={styles.h3}>{name}</h3>
       <h3 className={styles.h3}>${price}</h3>
@@ -113,8 +111,6 @@ const StyledImage = styled.section`
   justify-content: center;
   margin-top: 10px;
 `;
-
-
 
 DisplayItemInfo.propTypes = {
   name: PropTypes.string,

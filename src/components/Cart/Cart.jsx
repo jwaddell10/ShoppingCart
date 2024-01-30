@@ -10,13 +10,10 @@ function Cart({ cart, removeFromCart }) {
   }, 0);
   return (
     <>
-      <h1 className={styles.h1}>Cart</h1>
-      
-        {" "}
-        {cart && cart.length > 0 ? (
-          
-          cart.map((item) => (
-            <StyledList key={item.id}>
+      <h1 className={styles.h1}>Cart</h1>{" "}
+      {cart && cart.length > 0 ? (
+        cart.map((item) => (
+          <StyledList key={item.id}>
             <div key={item.id}>
               <StyledCard>
                 <DisplayItemInfo
@@ -32,14 +29,13 @@ function Cart({ cart, removeFromCart }) {
                 </StyledButton>
               </StyledCard>
             </div>
-            </StyledList>
-          ))
-        ) : (
-          <StyledText>
-            <h3 className={styles.h3}>Oh no! Your cart is empty</h3>
-          </StyledText>
-        )}
-     
+          </StyledList>
+        ))
+      ) : (
+        <StyledText>
+          <h3 className={styles.h3}>Oh no! Your cart is empty</h3>
+        </StyledText>
+      )}
       <StyledText>
         <div>Total: ${totalPrice}</div>
       </StyledText>
