@@ -87,6 +87,7 @@ const StyledList = styled.section`
 
 const StyledCard = styled.section`
   display: flex;
+  border: 1px solid black;
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -101,6 +102,7 @@ const StyledButton = styled.section`
   align-content: center;
   flex-wrap: wrap;
   width: 100%;
+  margin: 1px;
 `;
 
 const StyledImage = styled.section`

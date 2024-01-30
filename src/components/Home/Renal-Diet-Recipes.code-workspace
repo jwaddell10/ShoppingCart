@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../../Renal-Diet-Recipes"
+		},
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../../../odin-recipes"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ShoppingCart"
+	}
+}

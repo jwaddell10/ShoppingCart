@@ -8,7 +8,6 @@ function Cart({ cart, removeFromCart }) {
   }, 0);
   return (
     <>
-    
       <StyledList>
         {" "}
         {cart && cart.length > 0 ? (
@@ -21,24 +20,23 @@ function Cart({ cart, removeFromCart }) {
                   image={item.image}
                   price={item.price}
                 />
+                <StyledButton>
+                  <button onClick={() => removeFromCart(item)}>
+                    Remove From Cart
+                  </button>
+                </StyledButton>
               </StyledCard>
-
-              <button onClick={() => removeFromCart(item)}>
-                Remove From Cart
-              </button>
             </div>
           ))
         ) : (
           <h3>Oh no! Your cart is empty</h3>
         )}
       </StyledList>
-
-      <div>Total: ${totalPrice}</div>
+      <StyledText>      <div>Total: ${totalPrice}</div>
+</StyledText>
     </>
   );
 }
-
-
 
 const StyledList = styled.section`
   display: grid;
@@ -59,6 +57,19 @@ const StyledCard = styled.section`
   width: 100%;
   box-shadow: 5px 5px 5px gray;
 `;
+
+const StyledButton = styled.section`
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 1px;
+`;
+
+const StyledText = styled.section`
+  font-size: 1.25rem;
+`
 
 Cart.propTypes = {
   cart: PropTypes.array,
