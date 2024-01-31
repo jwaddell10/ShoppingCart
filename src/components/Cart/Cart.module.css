@@ -2,3 +2,7 @@
     text-align: center;
     width: 100vw;
 }
+
+.button {
+    border: 1px solid black;
+}

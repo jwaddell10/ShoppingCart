@@ -23,7 +23,7 @@ function Cart({ cart, removeFromCart }) {
                   price={item.price}
                 />
                 <StyledButton>
-                  <button onClick={() => removeFromCart(item)}>
+                  <button className={styles.button} onClick={() => removeFromCart(item)}>
                     Remove From Cart
                   </button>
                 </StyledButton>
