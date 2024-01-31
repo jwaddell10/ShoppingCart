@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import imgUrl from './src/assets/HomePageBackground.png'
+
 
 function HomePage() {
   //needs three icons, image assets?
@@ -15,7 +17,7 @@ function Body() {
   return (
     <>
       <img
-        src="/src/assets/HomePageBackground.png"
+        src={imgUrl}
         alt="laptopcomputerondesk"
         style={imageStyle}
       />
