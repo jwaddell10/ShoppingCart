@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import imgUrl from './src/assets/HomePageBackground.png'
 
 
 function HomePage() {
@@ -17,7 +16,7 @@ function Body() {
   return (
     <>
       <img
-        src={imgUrl}
+        src="public/assets/HomePageBackground.png"
         alt="laptopcomputerondesk"
         style={imageStyle}
       />
