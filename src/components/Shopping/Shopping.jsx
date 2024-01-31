@@ -2,11 +2,8 @@ import useTitle from "../FetchAPI.jsx";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import styles from "./Shopping.module.css";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
-
-import InputField from "./InputField.jsx";
-console.log(Math.random(), 'this is mathrandom')
 const Shopping = ({ addToCart }) => {
   const { items } = useTitle();
   const listItems =
@@ -37,7 +34,10 @@ const Shopping = ({ addToCart }) => {
                       price={item.price}
                     />
                     <StyledButton>
-                      <button onClick={() => addToCart(item)}>
+                      <button
+                        className={styles.button}
+                        onClick={() => addToCart(item)}
+                      >
                         Add To Cart
                       </button>
                     </StyledButton>
@@ -118,7 +118,7 @@ DisplayItemInfo.propTypes = {
   name: PropTypes.string,
   image: PropTypes.string,
   price: PropTypes.number,
-  id: PropTypes.number,
+  id: PropTypes.string,
 };
 
 Shopping.propTypes = {

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 function HomePage() {
   //needs three icons, image assets?
   //probably needs a router to the three icons
