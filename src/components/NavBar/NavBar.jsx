@@ -59,8 +59,20 @@ const StyledNavBar = styled.section`
 const StyledList = styled.section`
   color: white;
   list-style-type: none;
-  gap: 1vw;
+  gap: 2vw;
   display: flex;
+
+  li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  li:hover {
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 export default NavBar;
