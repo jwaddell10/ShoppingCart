@@ -15,7 +15,7 @@ function Body() {
   return (
     <>
       <img
-        src="src/assets/HomePageBackground.png"
+        src="/src/assets/HomePageBackground.png"
         alt="laptopcomputerondesk"
         style={imageStyle}
       />

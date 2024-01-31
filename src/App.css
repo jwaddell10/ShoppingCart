@@ -40,3 +40,10 @@
 .read-the-docs {
   color: #888;
 }
+
+body {
+  background-image: url("https://wallpapercave.com/wp/wp2860892.jpg");
+  background-size: cover;
+  background-position: center; 
+  font-family: 'Pixelify Sans', sans-serif;
+}
