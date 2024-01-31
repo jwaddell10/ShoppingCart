@@ -11,10 +11,12 @@ function Cart({ cart, removeFromCart }) {
   return (
     <>
       <h1 className={styles.h1}>Cart</h1>{" "}
+      
       {cart && cart.length > 0 ? (
         cart.map((item) => (
-          <StyledList key={item.id}>
+          
             <div key={item.id}>
+              <StyledList>
               <StyledCard>
                 <DisplayItemInfo
                   name={item.name}
@@ -28,8 +30,9 @@ function Cart({ cart, removeFromCart }) {
                   </button>
                 </StyledButton>
               </StyledCard>
+              </StyledList>
             </div>
-          </StyledList>
+        
         ))
       ) : (
         <StyledText>
@@ -47,8 +50,6 @@ const StyledList = styled.section`
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  background-color: #fff;
-  color: #444;
   list-style-type: none;
   width: 100vw;
 `;
@@ -74,12 +75,12 @@ const StyledButton = styled.section`
 `;
 
 const StyledText = styled.section`
-  font-size: 1.25rem;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-column: unset;
+font-size: 1.25rem;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+grid-column: unset;
 `;
 
 Cart.propTypes = {
