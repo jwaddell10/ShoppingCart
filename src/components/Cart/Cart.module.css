@@ -6,3 +6,9 @@
 .button {
     border: 1px solid black;
 }
+
+.pagediv {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }

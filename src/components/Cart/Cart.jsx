@@ -10,13 +10,14 @@ function Cart({ cart, removeFromCart }) {
   }, 0);
   return (
     <>
+    <StyledDiv>
+      <div className={styles.pagediv}>
       <h1 className={styles.h1}>Cart</h1>{" "}
-      
+      <StyledList>
       {cart && cart.length > 0 ? (
         cart.map((item) => (
           
             <div key={item.id}>
-              <StyledList>
               <StyledCard>
                 <DisplayItemInfo
                   name={item.name}
@@ -30,7 +31,6 @@ function Cart({ cart, removeFromCart }) {
                   </button>
                 </StyledButton>
               </StyledCard>
-              </StyledList>
             </div>
         
         ))
@@ -38,18 +38,30 @@ function Cart({ cart, removeFromCart }) {
         <StyledText>
           <h3 className={styles.h3}>Oh no! Your cart is empty</h3>
         </StyledText>
-      )}
+      )}</StyledList>
       <StyledText>
         <div>Total: ${totalPrice}</div>
       </StyledText>
+      </div>
+      </StyledDiv>
+      
     </>
   );
 }
+
+const StyledDiv = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+`;
 
 const StyledList = styled.section`
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  background-color: #fff;
+  color: #444;
   list-style-type: none;
   width: 100vw;
 `;
@@ -75,12 +87,12 @@ const StyledButton = styled.section`
 `;
 
 const StyledText = styled.section`
-font-size: 1.25rem;
-text-align: center;
-display: flex;
-justify-content: center;
-align-items: center;
-grid-column: unset;
+  font-size: 1.25rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: unset;
 `;
 
 Cart.propTypes = {
