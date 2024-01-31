@@ -4,13 +4,11 @@
 			"path": "../../../../Renal-Diet-Recipes"
 		},
 		{
-			"path": "../../.."
+			"path": "../../../../Renal-Diet-Recipe-App"
 		},
 		{
-			"path": "../../../../../../odin-recipes"
+			"path": "../../.."
 		}
 	],
-	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "ShoppingCart"
-	}
+	"settings": {}
 }

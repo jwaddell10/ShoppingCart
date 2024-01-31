@@ -2,9 +2,11 @@ import useTitle from "../FetchAPI.jsx";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import styles from "./Shopping.module.css";
+import { v4 as uuidv4 } from 'uuid';
+
 
 import InputField from "./InputField.jsx";
-
+console.log(Math.random(), 'this is mathrandom')
 const Shopping = ({ addToCart }) => {
   const { items } = useTitle();
   const listItems =
@@ -12,7 +14,7 @@ const Shopping = ({ addToCart }) => {
     items.map((item) => {
       return {
         image: item.image,
-        id: item.id,
+        id: uuidv4(),
         name: item.title,
         price: item.price,
       };
@@ -123,7 +125,7 @@ Shopping.propTypes = {
   name: PropTypes.string,
   image: PropTypes.string,
   price: PropTypes.number,
-  id: PropTypes.number,
+  id: PropTypes.string,
   addToCart: PropTypes.func,
   removeFromCart: PropTypes.func,
 };
