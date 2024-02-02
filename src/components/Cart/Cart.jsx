@@ -60,8 +60,6 @@ const StyledList = styled.section`
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  background-color: #fff;
-  color: #444;
   list-style-type: none;
   width: 100vw;
 `;
@@ -93,6 +91,7 @@ const StyledText = styled.section`
   justify-content: center;
   align-items: center;
   grid-column: unset;
+  width: 100vw;
 `;
 
 Cart.propTypes = {
