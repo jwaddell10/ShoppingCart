@@ -5,11 +5,11 @@
 
 In this project, I honed my skills in:
 
-  -Fetching APIs with ReactJS
-  -Implementing React Routers for a seamless user experience
-  -Applying SOLID Principles for component organization
-  -Utilizing Styled Components and importing CSS modules for styling
-  -Implementing Responsive Web Design for compatibility across mobile, tablet, and desktop devices
+  -Fetching APIs with ReactJS<br></br>
+  -Implementing React Routers for a seamless user experience<br></br>
+  -Applying SOLID Principles for component organization<br></br>
+  -Utilizing Styled Components and importing CSS modules for styling<br></br>
+  -Implementing Responsive Web Design for compatibility across mobile, tablet, and desktop devices<br></br>
 
 **How to run:**  https://shopping-cart-seven-fawn.vercel.app/
 
