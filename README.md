@@ -14,11 +14,11 @@ In this project, I honed my skills in:
 **How to run:**  https://shopping-cart-seven-fawn.vercel.app/
 
 **How to use:** <img width="1435" alt="Screenshot 2024-02-04 at 4 58 41 PM" src="https://github.com/jwaddell10/ShoppingCart/assets/115955410/dd854575-d89d-48d2-934b-7179008533ae">
-At the top of the page you'll notice a navbar with items you can click. A **Home** button, to navigate to the HomePage, a **Shopping** button, to view the items in the store, and a **Cart** button, to view items in your cart.
+At the top of the page, you'll find a navbar with clickable items. The **Home** button allows navigation to the HomePage, the **Shopping** button displays items in the store, and the **Cart** button provides access to items in your cart
 
 <img width="1421" alt="Screenshot 2024-02-04 at 5 00 35 PM" src="https://github.com/jwaddell10/ShoppingCart/assets/115955410/cb80b4fe-c1be-4161-a699-d9d716d641f7">
 
-On the Shopping page, you have the ability to browse products. Upon clicking **Add to Cart**, the selected item is added to your cart, accessible for viewing on the Cart page.
+While on the Shopping page, you can explore a variety of products. By selecting **Add to Cart**, the chosen item is included in your cart, which you can then view on the Cart page
 
 <img width="1435" alt="Screenshot 2024-02-04 at 5 01 49 PM" src="https://github.com/jwaddell10/ShoppingCart/assets/115955410/b0c4a515-a159-4d06-b40a-318b7a6b45da">
 
