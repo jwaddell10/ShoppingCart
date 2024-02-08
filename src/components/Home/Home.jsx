@@ -10,6 +10,7 @@ function Body() {
   return (
     <>
       <img
+        name="computer"
         src="assets/HomePageBackground.png"
         alt="laptopcomputerondesk"
         style={imageStyle}
