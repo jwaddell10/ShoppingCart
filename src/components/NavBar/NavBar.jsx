@@ -11,7 +11,7 @@ function NavBar() {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" name="navbar">
       <StyledNavBar>
         <h3 style={headingStyle}>Electronics Store</h3>
         <ul>
