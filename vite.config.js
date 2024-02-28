@@ -8,5 +8,10 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: './src/setup.js',
+    coverage: {
+      provider: 'istanbul', // or 'v8'
+      reporter: ['text', 'json', 'html'],
+    },
+    
   },
 })
