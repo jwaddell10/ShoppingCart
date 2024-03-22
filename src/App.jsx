@@ -7,34 +7,39 @@ import Cart from "./components/Cart/Cart.jsx";
 import PropTypes from "prop-types";
 
 function App() {
-  const [cart, setCart] = useState([]);
+	const [cart, setCart] = useState([]);
 
-  const addToCart = (itemToAdd) => {
-    setCart([...cart, itemToAdd]);
-  };
-  const removeFromCart = (itemToRemove) => {
-    const currentItem = itemToRemove.id;
-    const newItems = cart.filter((cartItem) => cartItem.id !== currentItem);
-    setCart(newItems);
-  };
+	const addToCart = (itemToAdd) => {
+		setCart([...cart, itemToAdd]);
+	};
+	const removeFromCart = (itemToRemove) => {
+		const currentItem = itemToRemove.id;
+		const newItems = cart.filter((cartItem) => cartItem.id !== currentItem);
+		setCart(newItems);
+	};
 
-  return (
-    <Router>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/shopping" element={<Shopping addToCart={addToCart} />} />
-        <Route
-          path="/cart"
-          element={<Cart cart={cart} removeFromCart={removeFromCart} />}
-        />
-      </Routes>
-    </Router>
-  );
+	return (
+		<Router>
+			<NavBar />
+			<Routes>
+				<Route path="/" element={<HomePage />} />
+				<Route
+					path="/shopping"
+					element={<Shopping addToCart={addToCart} />}
+				/>
+				<Route
+					path="/cart"
+					element={
+						<Cart cart={cart} removeFromCart={removeFromCart} />
+					}
+				/>
+			</Routes>
+		</Router>
+	);
 }
 
 App.propTypes = {
-  items: PropTypes.object,
+	items: PropTypes.object,
 };
 
 export default App;

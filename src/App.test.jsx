@@ -3,16 +3,16 @@ import { render, screen } from "@testing-library/react";
 import App from "./App";
 
 describe("App", () => {
-  it("renders component", () => {
-    render(<App title="App" />);
-    screen.debug();
-  });
+	it("renders component", () => {
+		render(<App title="App" />);
+		screen.debug();
+	});
 
-  it("renders navbar", () => {
-    render(<nav name='navbar' />);
-    // expect(screen.getByText("navbar")).toBeInTheDocument();
-  // it('renders routes', () => {
-  //   render(<route />)
-  // })
-  });
+	it("renders navbar", () => {
+		render(<nav name="navbar" />);
+		// expect(screen.getByText("navbar")).toBeInTheDocument();
+		// it('renders routes', () => {
+		//   render(<route />)
+		// })
+	});
 });

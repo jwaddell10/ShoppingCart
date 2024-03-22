@@ -1,18 +1,18 @@
 .h1 {
-    text-align: center;
-    width: 100vw;
+	text-align: center;
+	width: 100vw;
 }
 
 .button {
-    border: 1px solid black;
+	border: 1px solid black;
 }
 
 .pagediv {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2rem;
-  }
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+}
 
 .h3 {
-    text-align: center;
+	text-align: center;
 }
