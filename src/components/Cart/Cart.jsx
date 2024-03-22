@@ -5,9 +5,9 @@ import styles from "./Cart.module.css";
 import styled from "styled-components";
 
 function Cart({ cart, removeFromCart }) {
-	const totalPrice = cart.reduce((acc, item) => {
-		return acc + item.price;
-	}, 0);
+	const totalPrice =
+		cart.length > 0 ? cart.reduce((acc, item) => acc + item.price, 0) : 0;
+
 	return (
 		<>
 			<StyledDiv>
